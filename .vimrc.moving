@@ -24,12 +24,15 @@ inoremap <C-e> <End>
 "------------------------------
 "  NOMAL MODE
 "------------------------------
-"Home,End in normal mode
+" Home,End in normal mode
 nmap <silent>1 :<C-u>call <SID>rotate_home()<CR>
 nmap 2 $
 nmap 9 $
 nnoremap <C-a> 1
 nnoremap <C-e> $
+
+" ;->command in normal mode
+nnoremap ; :
 
 " 非空白行頭→空白行頭のローテート
 function! s:rotate_home()
