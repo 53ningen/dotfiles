@@ -1,0 +1,39 @@
+"@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+"  Moving
+"@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+
+" 行末-行頭移動
+set whichwrap=b,s,h,l,<,>,[,]
+" backspaceで色々削除
+set backspace=indent,eol,start
+
+"------------------------------
+"  INSERT MODE
+"------------------------------
+" hjkl in insert mode
+inoremap <C-h> <Left>
+inoremap <C-j> <Down>
+inoremap <C-k> <Up>
+inoremap <C-l> <Right>
+" DEL,BS,0$ in isert mode
+inoremap <C-x> <DEL>
+inoremap <C-d> <BS>
+inoremap <silent><C-a> <Esc>:<C-u>call <SID>rotate_home()<CR>i
+inoremap <C-e> <End>
+
+"------------------------------
+"  NOMAL MODE
+"------------------------------
+"Home,End in normal mode
+nmap <silent>1 :<C-u>call <SID>rotate_home()<CR>
+nmap 2 $
+nmap 9 $
+nnoremap <C-a> 1
+nnoremap <C-e> $
+
+" 非空白行頭→空白行頭のローテート
+function! s:rotate_home()
+  let cursol_position = col(".")
+  let cmd = cursol_position == 1 ? '^' : '0'
+    execute "normal! ".cmd
+endfunction
