@@ -28,8 +28,9 @@ inoremap <C-e> <End>
 nmap <silent>1 :<C-u>call <SID>rotate_home()<CR>
 nmap 2 $
 nmap 9 $
-nnoremap <C-a> 1
+nnoremap <C-a> :<C-u>call <SID>rotate_home()<CR>
 nnoremap <C-e> $
+nnoremap <silent>a :<C-u>call <SID>rotate_home()<CR>
 
 " ;->command in normal mode
 nnoremap ; :
