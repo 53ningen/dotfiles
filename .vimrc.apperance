@@ -1,15 +1,15 @@
 "@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 "  Apperance
 "@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-set showmatch         " $B3g8L$NBP1~$r%O%$%i%$%H(B
-set number            " $B9THV9fI=<((B
-set list              " $BIT2D;kJ8;zI=<((B
-set display=uhex      " $B0u;zIT2DG=J8;z$r(B16$B?J?t$GI=<((B
-set ruler             " $B9TNsHV9f$r%9%F!<%?%9%P!<$KI=<((B
+set showmatch         " 括弧の対応をハイライト
+set number            " 行番号表示
+set list              " 不可視文字表示
+set display=uhex      " 印字不可能文字を16進数で表示
+set ruler             " 行列番号をステータスバーに表示
 
-" $B%+!<%=%k9T$r%O%$%i%$%H(B
+" カーソル行をハイライト
 set cursorline
-" $B%+%l%s%H%&%#%s%I%&$K$N$_7S@~$r0z$/(B
+" カレントウィンドウにのみ罫線を引く
 augroup cch
   autocmd! cch
   autocmd WinLeave * set nocursorline
@@ -20,8 +20,8 @@ hi clear CursorLine
 hi CursorLine gui=underline
 highlight CursorLine ctermbg=black guibg=black
 
-" $B%3%^%s%I<B9TCf$O:FIA2h$7$J$$(B
+" コマンド実行中は再描画しない
 set lazyredraw
-" $B9bB.%?!<%_%J%k@\B3$r9T$&(B
+" 高速ターミナル接続を行う
 set ttyfast
 

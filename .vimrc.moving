@@ -2,9 +2,9 @@
 "  Moving
 "@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 
-" $B9TKv(B-$B9TF,0\F0(B
+" 行末-行頭移動
 set whichwrap=b,s,h,l,<,>,[,]
-" backspace$B$G?'!9:o=|(B
+" backspaceで色々削除
 set backspace=indent,eol,start
 
 "------------------------------
@@ -31,7 +31,7 @@ nmap 9 $
 nnoremap <C-a> 1
 nnoremap <C-e> $
 
-" $BHs6uGr9TF,"*6uGr9TF,$N%m!<%F!<%H(B
+" 非空白行頭→空白行頭のローテート
 function! s:rotate_home()
   let cursol_position = col(".")
   let cmd = cursol_position == 1 ? '^' : '0'

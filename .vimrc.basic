@@ -1,38 +1,38 @@
 "@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 "  Basics
 "@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-let mapleader = ","              " $B%-!<%^%C%W%j!<%@!<(B
-set scrolloff=5                  " $B%9%/%m!<%k;~$NM>Gr3NJ](B
-set textwidth=0                  " $B0l9T$KD9$$J8>O$r=q$$$F$$$F$b<+F0@^$jJV$7$r$7$J$$(B
-set nobackup                     " $B%P%C%/%"%C%W<h$i$J$$(B
-set autoread                     " $BB>$G=q$-49$($i$l$?$i<+F0$GFI$_D>$9(B
-set noswapfile                   " $B%9%o%C%W%U%!%$%k:n$i$J$$(B
-set hidden                       " $BJT=8Cf$G$bB>$N%U%!%$%k$r3+$1$k$h$&$K$9$k(B
-set formatoptions=lmoq           " $B%F%-%9%H@07A%*%W%7%g%s!$%^%k%A%P%$%H7O$rDI2C(B
-set vb t_vb=                     " $B%S!<%W$r$J$i$5$J$$(B
-set browsedir=buffer             " Explore$B$N=i4|%G%#%l%/%H%j(B
-set showcmd                      " $B%3%^%s%I$r%9%F!<%?%99T$KI=<((B
-set showmode                     " $B8=:_$N%b!<%I$rI=<((B
-set viminfo='50,<1000,s100,\"50  " viminfo$B%U%!%$%k$N@_Dj(B
-set modelines=0                  " $B%b!<%I%i%$%s$OL58z(B
-set notitle                      " vim$B$r;H$C$F$/$l$F$"$j$,$H$&(B
+let mapleader = ","              " キーマップリーダー
+set scrolloff=5                  " スクロール時の余白確保
+set textwidth=0                  " 一行に長い文章を書いていても自動折り返しをしない
+set nobackup                     " バックアップ取らない
+set autoread                     " 他で書き換えられたら自動で読み直す
+set noswapfile                   " スワップファイル作らない
+set hidden                       " 編集中でも他のファイルを開けるようにする
+set formatoptions=lmoq           " テキスト整形オプション，マルチバイト系を追加
+set vb t_vb=                     " ビープをならさない
+set browsedir=buffer             " Exploreの初期ディレクトリ
+set showcmd                      " コマンドをステータス行に表示
+set showmode                     " 現在のモードを表示
+set viminfo='50,<1000,s100,\"50  " viminfoファイルの設定
+set modelines=0                  " モードラインは無効
+set notitle                      " vimを使ってくれてありがとう
 
-" OS$B$N%/%j%C%W%\!<%I$r;HMQ$9$k(B
+" OSのクリップボードを使用する
 set clipboard+=unnamed
 
-" $B%?!<%_%J%k$G%^%&%9$r;HMQ$G$-$k$h$&$K$9$k(B
+" ターミナルでマウスを使用できるようにする
 set mouse=a
 set guioptions+=a
 set ttymouse=xterm2
 
-"$B%d%s%/$7$?J8;z$O!"%7%9%F%`$N%/%j%C%W%\!<%I$KF~$l$k(B"
+"ヤンクした文字は、システムのクリップボードに入れる"
 set clipboard=unnamed
 
-" Ev/Rv$B$G(Bvimrc$B$NJT=8$HH?1G(B
+" Ev/Rvでvimrcの編集と反映
 command! Ev edit $MYVIMRC
 command! Rv source $MYVIMRC
 
-" $B%U%!%$%k%?%$%WH=Dj$r(Bon
+" ファイルタイプ判定をon
 filetype plugin on
 
 
