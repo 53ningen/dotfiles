@@ -3,11 +3,11 @@
 "@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 
 " 括弧を自動補完
-inoremap { {}<LEFT>
-inoremap [ []<LEFT>
-inoremap ( ()<Space><LEFT><LEFT>
-inoremap " ""<LEFT>
-inoremap ' ''<LEFT>
+"inoremap { {}<LEFT>
+"inoremap [ []<LEFT>
+"inoremap ( ()<Space><LEFT><LEFT>
+"inoremap " ""<LEFT>
+"inoremap ' ''<LEFT>
 vnoremap { "zdi^V{<C-R>z}<ESC>
 vnoremap [ "zdi^V[<C-R>z]<ESC>
 vnoremap ( "zdi^V(<C-R>z)<ESC>
@@ -15,8 +15,8 @@ vnoremap " "zdi^V"<C-R>z^V"<ESC>
 vnoremap ' "zdi'<C-R>z'<ESC>
 
 " スペース補完
-inoremap , ,<Space>
-inoremap : :<Space>
+"inoremap , ,<Space>
+"inoremap : :<Space>
 
 " 単語/行単位の削除をアンドゥ可能にする
 inoremap <C-u>  <Esc>:u<CR> i

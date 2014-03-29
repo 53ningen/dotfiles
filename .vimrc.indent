@@ -9,6 +9,8 @@ set cindent      " Cプログラムファイルの自動インデントを始め
 
 " softtabstopはTabキー押し下げ時の挿入される空白の量，0の場合はtabstopと同じ，BSにも影響する
 set tabstop=2 shiftwidth=2 softtabstop=0
+" tabをspaceに変換
+set expandtab
 
 if has("autocmd")
   "ファイルタイプの検索を有効にする
