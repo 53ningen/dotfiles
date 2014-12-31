@@ -1,6 +1,6 @@
 my dotfiles
 ----
-yuruyoroさんのdotfilesを参考にしてつくってみた
+yuroyoroさんのdotfilesを参考にしてつくってみた
 https: //github.com/yuroyoro/dotfiles
 
 
